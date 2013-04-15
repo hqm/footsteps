@@ -77,13 +77,15 @@ void initialize_audio() {
     
 }
 
+int clap = 20;
+
 void draw()
 {
   background(0);
   stroke(255);
  
   float hscale = width / float(SAMPLE_LENGTH);
-  float scale = 1;
+  float scale = 2.5;
   
   if (trigger) {
     record_on_trigger();
@@ -102,7 +104,7 @@ void draw()
   
   stroke(255);
   for (int i = 0; i < SAMPLE_LENGTH; i++) {
-   if (samples[i] > 30) {
+   if (samples[i] > clap) {
     rect(i*hscale, height/2-100, 2, 200);
    } 
   }
