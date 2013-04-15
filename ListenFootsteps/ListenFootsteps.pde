@@ -159,7 +159,7 @@ void captureSound() {
     for (int i = 0; i < samples.length; i++) {
       samples[i] = (int) captured[i];
     }
-    saveFile(samples, "/Users/hqm/src/steps/samples/samples.obj");
+    //saveFile(samples, "/Users/hqm/src/steps/samples/samples.obj");
 }
 
 public static int[] loadFile(String filename){
